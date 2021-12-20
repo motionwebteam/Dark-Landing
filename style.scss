@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import "reset";
+@import "variables";
+
+
+$ff: "Poppins", sans-serif;
+$bgColor: #181818;
+
+%btn {
+  width: 195px;
+  height: 52px;
+  right: 39px;
+  top: calc(50% - 52px / 2 - 0.5px);
+  border: 1px solid #D9B346;
+  box-sizing: border-box;
+  /* shadow */
+
+  filter: drop-shadow(0px 4px 31px rgba(0, 0, 0, 0.15));
+
+
+}
+
+
+body {
+  font-family: $ff;
+  background: $bgColor;
+}
+
+.container {
+  width: 1140px;
+  margin: auto;
+}
+
+//HEADER
+#header {
+  padding-top: 40px;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__logo, {
+
+    }
+
+    &__menu {
+      &--item {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        /* identical to box height, or 150% */
+
+        text-align: center;
+        letter-spacing: 0.2px;
+
+        /* light text */
+
+        color: #FFFFFF;
+        margin: 0 10px;
+      }
+    }
+
+    &__btn {
+      @extend %btn;
+    }
+  }
+
+
+}
+
+//HEADER
+
+//HERO
+#hero {
+  padding-top: 60px;
+  background: $bgColor;
+  min-height: 100vh;
+
+  .hero {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    &__theme {
+      font-weight: 500;
+      font-size: 80px;
+      line-height: 88px;
+      /* or 110% */
+
+      text-align: center;
+      letter-spacing: 0.2px;
+
+      /* light text */
+
+      color: #FFFFFF;
+    }
+
+    &__title {
+      font-size: 20px;
+      line-height: 30px;
+      /* or 150% */
+
+      text-align: center;
+      letter-spacing: 0.2px;
+      margin-bottom: 40px;
+      color: #F8F8F8;
+    }
+
+    &__buttons {
+      &--left {
+        @extend %btn;
+        background: linear-gradient(96.01deg, #F7EA76 0%, #D1AF4D 111.25%);
+        /* shadow */
+        box-shadow: 0 4px 31px rgba(0, 0, 0, 0.15);
+        color: #181818;
+      }
+
+      &--right {
+        @extend %btn2;
+        background: linear-gradient(96.01deg, #030303 0%, #070707 111.25%);
+        /* shadow */
+        box-shadow: 0 4px 31px rgba(10, 10, 10, 0.15);
+        color: #ffffff;
+      }
+
+    }
+
+    &__buttons button {
+      margin: 0 15px;
+    }
+
+    &__video {
+      padding-top: 40px;
+      width: 975px;
+      height: 441px;
+    }
+
+    &__text {
+      font-size: 52px;
+      line-height: 62px;
+      /* identical to box height, or 119% */
+
+      letter-spacing: 0.2px;
+
+      /* light text */
+
+      color: #FFFFFF;
+
+    }
+
+    &__texttitle {
+      font-size: 20px;
+      line-height: 30px;
+      /* or 150% */
+
+      text-align: center;
+      letter-spacing: 0.2px;
+
+      color: #F8F8F8;
+
+    }
+  }
+}
+
+//HERO
